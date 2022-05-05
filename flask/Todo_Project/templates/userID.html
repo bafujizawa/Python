@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User by ID</title>
+</head>
+<body>
+    {% if error_message == True %}
+    <h1>the user with id {{u_id}} is not found in the list</h1>
+    {%else%}
+    <h1>Information of the user {{u_id}}</h1>
+    <div>
+        <p>{{user['first_name'] }} {{user['last_name']}}</p>
+        <p>ID : {{user['id]}}</p>
+    </div>
+</body>
+</html>
