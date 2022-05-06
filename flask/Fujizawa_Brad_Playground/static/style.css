@@ -1,0 +1,91 @@
+#box {
+    border: solid black 5px;
+    height: 50px;
+    width: 50px;
+    background-color: black;
+}
+
+#welcome {
+    background-color: aqua;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.flex-2 {
+    flex: 2;
+}
+
+.align-around {
+    align-items: space-around;
+}
+
+.align-between {
+    align-items: space-between;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.align-end {
+    align-items: flex-end;
+}
+
+.align-start {
+    align-items: flex-start;
+}
+
+.justify-around {
+    justify-content: space-around;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+.justify-start {
+    justify-content: flex-start;
+}
+
+.background-white {
+    background-color: white;
+}
+
+.background-black {
+    background-color: black;
+}
+
+.gap-10 {
+    gap: 10px;
+}
+
+.gap-25 {
+    gap: 25px;
+}
