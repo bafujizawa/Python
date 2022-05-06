@@ -1,0 +1,23 @@
+#flexbox {
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+   
+}
+
+#square1 {
+    display: flex;
+    /* flex-direction: row; */
+    padding: 50px;
+    border: solid black 1px;
+    background-color: black;
+
+}
+
+#square2 {
+    display: flex;
+    /* flex-direction: row; */
+    padding: 50px;
+    border: solid black 1px;
+    background-color: red;
+}
