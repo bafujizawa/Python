@@ -1,0 +1,21 @@
+* {
+    background-color: black;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+#flexbox {
+    margin: 15px;
+}
+
+#button {
+    margin-left: 15px;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey Index</title>
+</head>
+<body>
+    <div id="flexbox">
+        <div id="card">
+            <h1>Submitted info</h1>
+            <div id="left">
+                <h2>Name:</h2>
+                <h2>Dojo Location:</h2>
+                <h2>Favorite Language:</h2>
+                {% if is_comments %}
+                    <h2>{{ comments }}</h2>
+                {% endif %}
+            </div>
+            <div id="right">
+                <h2>{{ name }}</h2>
+                <h2>{{ location }}</h2>
+                <h2>{{ fav_language }}</h2>
+                {% if is_comments %}
+                    <h2>{{ comments }}</h2>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
