@@ -1,0 +1,22 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+#flexbox {
+    display: flex;
+    justify-content: center;
+}
+
+#survey_card {
+    margin-top: 50px;
+}
+
+#survey_form {
+    border: solid black 2px;
+    padding: 50px;
+}
+
+.padding-bot {
+    padding-bottom: 10px;
+}
