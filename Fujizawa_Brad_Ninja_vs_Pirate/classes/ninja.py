@@ -28,6 +28,7 @@ class Ninja:
         self.attack(pirate)
         self.powerattack(pirate)
 
+    # for final
     def seppuku(self):
         if self.health <= 2:
             self.health = 0
