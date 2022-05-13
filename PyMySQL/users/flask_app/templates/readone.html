@@ -8,13 +8,18 @@
 </head>
 <body>
     <div id="flexbox">
-        <h1>User {{ user.id }}</h1>
+        <div>
+            <h1>User {{ user.id }}</h1>
+            <a href="/users">Home</a>
+        </div>
         <div id="user-card">
             <h2>Full Name: {{ user.first_name + ' ' + user.last_name }}</h2>
             <h2>Email: {{ user.email }}</h2>
             <h2>Created At: {{ user.created_at }}</h2>
             <h2>Update At: {{ user.updated_at }}</h2>
         </div>
+        <a href="/users/{{ user.id }}/edit">Edit</a>
+        <a href="/users/{{ user.id }}/delete">Delete</a>
     </div>
 </body>
 </html>
