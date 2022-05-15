@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+</head>
+<body>
+    <div id="flexbox">
+        <form action="/users/update", method="POST">
+            <div>
+                <h1>Edit Profile</h1>
+                <div>
+                    <label for="first_name">First Name:</label>
+                    <input type="text" id="first_name" name="first_name" value="{{user.first_name}}">
+                    {% for message in get_flashed_messages(category_filter=['err_user_first_name']) %}
+                    <p class="alert alert-danger">{{ message }}</p>
+                    {% endfor %}
+                </div>
+                <div>
+                    <label for="last_name">Last Name:</label>
+                    <input type="text" id="last_name" name="last_name" value="{{user.last_name}}">
+                    {% for message in get_flashed_messages(category_filter=['err_user_last_name']) %}
+                    <p class="alert alert-danger">{{ message }}</p>
+                    {% endfor %}
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email" value="{{user.email}}">
+                    {% for message in get_flashed_messages(category_filter=['err_user_email']) %}
+                    <p class="alert alert-danger">{{ message }}</p>
+                    {% endfor %}
+                </div>
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password">
+                    {% for message in get_flashed_messages(category_filter=['err_user_password']) %}
+                    <p class="alert alert-danger">{{ message }}</p>
+                    {% endfor %}
+                </div>
+                <div>
+                    <label for="confirm_password">Confirm Password:</label>
+                    <input type="text" id="confirm_password" name="confirm_password">
+                </div>
+                <input type="submit" value="Edit Profile">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
