@@ -9,14 +9,15 @@
     <title>Dojo Survey</title>
 </head>
 <body>
-    <div id="flexbox">
+    <div id="flexbox" class="m-5">
         <div id="survey_card" class="bg-dark text-light">
+            <h1>Survey Card</h1>
             <form action="/process" method="POST" id="survey_form">
-                <div class="padding-bot">
+                <div>
                     <label for="name">Your name: </label>
                     <input type="text" name="name">
                 </div>
-                <div class="padding-bot d-flex justify-content-around">
+                <div>
                     <label for="Dojo Location">Dojo Location</label>
                     <select name="locations" id="">
                         <option value="San Jose">San Jose</option>
@@ -25,7 +26,7 @@
                         <option value="Atlanta">Atlanta</option>
                     </select>
                 </div>
-                <div class="padding-bot">
+                <div>
                     <label for="fav_language">Favorite Language</label>
                     <select name="fav_language" id="">
                         <option value="Python">Python</option>
@@ -34,9 +35,9 @@
                         <option value="Java">Java</option>
                     </select>
                 </div>
-                <div class="padding-bot">
+                <div>
                     <label for="Comments">Comments</label>
-                    <textarea name="comments" id="" cols="30" rows="2"></textarea>
+                    <textarea name="comments" id="" cols="25" rows="2"></textarea>
                     <input type="submit" value="submit">
                 </div>
             </form>

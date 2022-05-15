@@ -13,8 +13,13 @@
         <h1>Counter</h1>
         <div id="button" class="row">
             <h3 id="visits">{{ session['visits'] }} times</h3>
-            <button>Add two</button>
-            <form action="" method="get"></form>
+            <form action="/add_two" method="get">
+                <input type="submit" value="Add 2">
+            </form>
+            <form action="/destroy_session" method="get">
+                <input type="submit" value="Reset">
+            </form>
+            
         </div>
     </div>
 </body>

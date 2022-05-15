@@ -16,6 +16,12 @@ def destroySession():
     session.pop('visits')
     return redirect('/')
 
+@app.route('/add_two')
+def add_two():
+    # the 2nd is the refresh
+    session['visits'] += 1
+    return redirect('/')
+
 if __name__ == '__main__':
     app.run(debug=True)
     
