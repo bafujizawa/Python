@@ -16,10 +16,17 @@ def index():
 def register_user():
     if not User.validate_registration(request.form):
         return redirect('/')
+
     if len(request.form['password']) > 0:
         pw_hash = bcrypt.generate_password_hash(request.form['password'])
     else:
         flash('Password must be greater than 0')
+        return redirect('/users')
+
+    email = {'email':request.form['email']}
+    print(email)
+    if User.get_user_by_email(email):
+        flash('Email already exists', 'err_user_email')
         return redirect('/users')
 
     data = {
@@ -56,10 +63,10 @@ def user_login():
     if not user_in_db:
         flash('Invalid Email/Password')
         return redirect('/users')
-    if not bcrypt.check_password_hash(user_in_db.password, request.form['login_password']):
+    if not bcrypt.check_password_hash(user_in_db['password'], request.form['login_password']):
         flash('Invalid Email/Password')
         return redirect('/users')
-    session['user_id'] = user_in_db.id
+    session['user_id'] = user_in_db['id']
     return redirect('/users/welcome')
 
 @app.route('/users/update', methods=['POST'])
