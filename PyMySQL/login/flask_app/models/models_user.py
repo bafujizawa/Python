@@ -56,7 +56,7 @@ class User:
         connectToMySQL(DATABASE).query_db(query, data)
 
     @staticmethod
-    def validate_user( id_session):
+    def validate_user(id_session):
         if 'user_id' in id_session:
             return True
         else:
@@ -77,7 +77,7 @@ class User:
         if(user['password'] != user['confirm_password']):
             flash('The passwords do not match', 'err_user_password')
             is_valid = False
-        if len(user['password']) < 2:
+        if len(user['password']) < 8:
             flash('Password is too short', 'err_user_password')
             is_valid = False
         return is_valid

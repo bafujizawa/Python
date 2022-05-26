@@ -2,25 +2,25 @@ from flask import flash, redirect, render_template, request, session
 from flask_app import app
 from flask_bcrypt import Bcrypt
 bcrypt = Bcrypt(app)
-from flask_app.models.models_users import User
+from flask_app.models.models_user import User
 
 @app.route('/')
 def index():
     return render_template('index.html')
 
 @app.route('/users/register', methods=['POST'])
-def register_user():
+def define_user():
+    print('hello')
     if not User.validate_registration(request.form):
         return redirect('/')
+
     if User.get_user_by_email({'email':request.form['email']}):
         flash('Email address already exists', 'err_user_email')
         return redirect('/')
 
-    User.register_user({
-        'first_name': request.form['first_name'],
-        'last_name': request.form['last_name'],
-        'email': request.form['email'],
-        'password': bcrypt.generate_password_hash(request.form['register_password'])})
+    print('from the register')
+
+
     return redirect('/')
     
 @app.route('/users/login', methods=['POST'])
