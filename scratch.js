@@ -1,31 +1,57 @@
-const two_nums1 = [1, 3, 5, 6];
-const two_searchNum1 = 4;
-const two_expected1 = false;
+// const num1A = 1;
+// const num1B = 1;
+// const expected1 = 1;
 
-const two_nums2 = [4, 5, 6, 8, 12];
-const two_searchNum2 = 5;
-const two_expected2 = true;
+// const num2A = 5;
+// const num2B = 10;
+// const expected2 = 10;
 
-const two_nums3 = [3, 4, 6, 8, 12];
-const two_searchNum3 = 3;
-const two_expected3 = true;
+// const num3A = 10;
+// const num3B = 5;
+// const expected3 = 10;
+
+// const num4A = 6;
+// const num4B = 8;
+// const expected4 = 24;
+
+// const num5A = 15;
+// const num5B = 25;
+// const expected5 = 75;
 
 
+// function lowestCommonMultiple(a, b, i=1)
+// {
+//     // a + b
+//     // console.log(i)
+//     if(i % a == 0 && i % b == 0)
+//     {
+//         return i
+//     }
+//     return lowestCommonMultiple(a, b, ++i)
+// }
 
-function binarySearch(arr, n) {
-    let mid = Math.floor(arr.length / 2);
-    if (arr.length === 1 && arr[0] != n) {
-    return false;
+// console.log(lowestCommonMultiple(num1A, num1B))
+// console.log(lowestCommonMultiple(num2A, num2B))
+// console.log(lowestCommonMultiple(num3A, num3B))
+// console.log(lowestCommonMultiple(num4A, num4B))
+// console.log(lowestCommonMultiple(num5A, num5B))
+
+const two_str1 = "1?0?";
+const two_expected1 = ["1000", "1001", "1100", "1101"];
+
+
+function binaryStringExpansion(str, i=0, newList = [])
+{
+    if(i >= str.length)
+    {
+        return newList
     }
-    if (n === arr[mid]) {
-        return true;
-    } else if (n < arr[mid]) {
-        return binarySearch(n, arr.slice(0, mid));
-    } else if (n > arr[mid]) {
-        return binarySearch(n, arr.slice(mid));
+    if(str[i] === '?')
+    {
+        newList.push(str.replace('?', '0'))
+        newList.push(str.replace('?', '1'))
     }
+    return binaryStringExpansion(str, ++i)
 }
 
-console.log(binarySearch(two_nums1, two_expected1))
-console.log(binarySearch(two_nums2, two_expected2))
-console.log(binarySearch(two_nums3, two_expected3))
+console.log(binaryStringExpansion(two_str1))

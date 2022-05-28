@@ -1,4 +1,4 @@
-API_key = 'df31701d9e14e739584302181e80b918'
+API_key = ''
 
 function getWeather(city)
 {
