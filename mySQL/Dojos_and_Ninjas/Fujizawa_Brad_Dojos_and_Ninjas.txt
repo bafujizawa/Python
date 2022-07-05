@@ -1,0 +1,59 @@
+Create 3 New Dojos
+
+INSERT INTO dojos(name, created_at,updated_at)
+VALUES
+('New York', NOW(), NOW()),
+('Boston', NOW(), NOW()),
+('Paris', NOW(), NOW())
+
+Delete the 3 New Dojos
+
+DELETE FROM dojos
+WHERE id in (1,2,3)
+
+Create 3 more dojos
+
+INSERT INTO dojos(name, created_at,updated_at)
+VALUES
+('Monterey', NOW(), NOW()),
+('Santa Cruz', NOW(), NOW()),
+('San Diego', NOW(), NOW())
+
+Create 3 Ninjas for the 1st Dojo
+
+INSERT INTO ninjas(first_name, last_name, dojo_id, age, created_at,updated_at)
+VALUES
+('Marc', 'Anthony', 4, 53, NOW(), NOW()),
+('Jennifer', 'Lopez', 4, 52, NOW(), NOW()),
+('Sean', 'Combs', 4, 54, NOW(), NOW())
+
+Create 3 Ninjas for the 2nd Dojo
+
+INSERT INTO ninjas(first_name, last_name, dojo_id, age, created_at,updated_at)
+VALUES
+('Mary', 'Blige', 5, 51, NOW(), NOW()),
+('Andre', 'Young', 5, 57, NOW(), NOW()),
+('Tupac', 'Shakur', 5, 25, NOW(), NOW())
+
+Create 3 Ninjas for the 3rd Dojo
+
+INSERT INTO ninjas(first_name, last_name, dojo_id, age, created_at,updated_at)
+VALUES
+('Christopher', 'Wallace', 6, 24, NOW(), NOW()),
+('Amy', 'Winehouse', 6, 27, NOW(), NOW()),
+('Jimi', 'Hendrix', 6, 27, NOW(), NOW())
+
+Query: Retrieve all the ninjas from the first dojo
+
+SELECT * FROM ninjas
+WHERE dojo_id = 4
+
+Query: Retrieve all the ninjas from the last dojo(I assume it meant 2nd Dojo?)
+
+SELECT * FROM ninjas
+WHERE dojo_id = 5
+
+Query: Retrieve the last ninja's dojo
+
+SELECT * FROM ninjas
+WHERE dojo_id = 6
